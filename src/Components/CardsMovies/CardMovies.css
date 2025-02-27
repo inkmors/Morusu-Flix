@@ -1,0 +1,76 @@
+.container-card{
+    background-color: #E59312;
+    box-shadow: #ff7b0075 0px 5px 15px;
+    width: 16rem;
+    height: 30rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.18rem;
+    box-sizing: border-box;
+}
+
+.container-card img{
+    width: 100%;
+    height: 19rem;
+    object-fit: cover;
+    background-position: center;
+    border-radius: inherit;
+    box-shadow: #000000b9 0px 5px 15px;
+}
+
+.alignTitleCard{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    text-align: center;
+    gap: 2rem;
+    box-sizing: border-box;
+    margin-bottom: 1.5rem;
+}
+
+
+.alignTitleCard h2{
+    font-family: "Mulish";
+    font-weight: 800;
+    font-size: 17px;
+    color: #ffffff;
+}
+
+.alignTitleCard h3{
+    font-family: "Mulish";
+    font-weight: 700;
+    font-size: 13px;
+    color: #423738;
+}
+
+.titleCardAvalible{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    box-sizing: border-box;
+    color: #423738;
+}
+
+.alignTitleCard a{
+    font-family: "Mulish";
+    color: white;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #423738;
+    box-shadow: #00000091 0px 3px 8px;
+    padding: 0.5rem 1.5rem; 
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+.alignTitleCard a:hover{
+    background-color: #ffffff;
+    color: #423738;
+}

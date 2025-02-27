@@ -1,3 +1,24 @@
+@font-face{
+  font-family: 'Mulish';
+  src: url('../public/fonts/Mulish-VariableFont_wght.ttf');
+}
+
+@font-face{
+  font-family: 'JosefinSans';
+  src: url('../public/fonts/JosefinSans-VariableFont_wght.ttf');
+}
+
+@font-face{
+  font-family: 'Hubballi-Regular';
+  src: url('../public/fonts/Hubballi-Regular.ttf');
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +26,36 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  background-color: #1a141a;
+  color: #bfc0d1;
+}
+
+body::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1a141a;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #f4b315;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',monospace;
+}
+
+#root{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 1;
 }

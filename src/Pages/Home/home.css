@@ -1,0 +1,42 @@
+.container-home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex: 1;
+    gap: 2rem;
+}
+
+.align-moviesList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 2rem;
+    flex: 1;
+}
+
+.containnerTitleMovies{
+    width: 100%;
+    max-width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 3rem;
+  }
+  
+  .containnerTitleMovies hr{
+    width: 100%;
+    border: 1px solid #ffffff;
+  }
+  
+  .containnerTitleMovies h2{
+    width: 40rem;
+    text-align: center;
+    font-family: "Mulish";
+    font-size: 25px;
+    color: rgb(255, 255, 255); 
+  }
