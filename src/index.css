@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 @font-face{
   font-family: 'Mulish';
   src: url('/fonts/Mulish-VariableFont_wght.ttf');

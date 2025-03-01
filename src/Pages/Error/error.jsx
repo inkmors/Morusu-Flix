@@ -1,4 +1,3 @@
-import "./error.css"
 import { useEffect } from "react";
 
 function Error() {
@@ -8,9 +7,9 @@ function Error() {
     }, []);
 
     return (
-      <div className="container-error">
-        <h3>Não foi possível encontrar essa página!</h3>
-        <img src="assets/icons8-chorando-90.png" alt="imagem de Error" />
+      <div className="flex flex-1 flex-col items-center gap-10">
+        <h2 className="text-2xl">Não foi possível encontrar essa página!</h2>
+        <img className="w-25" src="assets/icons8-chorando-90.png" alt="imagem de Error" />
       </div>
     );
   }

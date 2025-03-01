@@ -6,12 +6,12 @@ import { useState, useEffect } from "react";
 
  
  function Favorites(){
-    const [ moviesFav, setMoviesFav] = useState([]);
+    //const [ moviesFav, setMoviesFav] = useState([]);
 
     useEffect(() => {
         document.title = "MorusuFlix | Favorites";
 
-        setMoviesFav(JSON.parse(localStorage.getItem('moviesFavorites')));
+        //setMoviesFav(JSON.parse(localStorage.getItem('moviesFavorites')));
 
     }, []);
     
@@ -23,11 +23,11 @@ import { useState, useEffect } from "react";
                 <hr />
             </div>
 
-            <div className="align-favorites">
+            {/* <div className="align-favorites">
                 {moviesFav.map((favorite) => (
                     <CardMovies key={favorite.id} img={favorite.photo} alt={`Foto do filme ${favorite.title}`} link={favorite.title} />
                 ))}
-            </div>
+            </div> */}
 
         </div>
     )
