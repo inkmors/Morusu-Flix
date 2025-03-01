@@ -1,16 +1,16 @@
 @font-face{
   font-family: 'Mulish';
-  src: url('../public/fonts/Mulish-VariableFont_wght.ttf');
+  src: url('/fonts/Mulish-VariableFont_wght.ttf');
 }
 
 @font-face{
   font-family: 'JosefinSans';
-  src: url('../public/fonts/JosefinSans-VariableFont_wght.ttf');
+  src: url('/fonts/JosefinSans-VariableFont_wght.ttf');
 }
 
 @font-face{
   font-family: 'Hubballi-Regular';
-  src: url('../public/fonts/Hubballi-Regular.ttf');
+  src: url('/fonts/Hubballi-Regular.ttf');
 }
 
 *{

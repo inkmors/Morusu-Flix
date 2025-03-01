@@ -10,7 +10,7 @@ function Error() {
     return (
       <div className="container-error">
         <h3>Não foi possível encontrar essa página!</h3>
-        <img src="assets/cabeca-alienigena.png" alt="imagem de Error" />
+        <img src="assets/icons8-chorando-90.png" alt="imagem de Error" />
       </div>
     );
   }

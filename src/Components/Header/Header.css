@@ -30,23 +30,51 @@
     text-shadow: rgba(255, 255, 255, 0.363) 0px 0px 15px;
 }
 
-.favorites{
+/* .favorites{
     text-decoration: none;
     font-family: "Josefinsans";
     font-weight: 800;
     font-size: 20px;
     color: rgb(255, 255, 255);
-    text-shadow: rgba(255, 255, 255, 0.363) 0px 0px 15px;
-    background-color: #d8a011;
-    box-shadow: #bd8a0a 0px 0px 15px;
     padding: 0.5rem 1rem;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
     transition: all 0.5s;
 }
 
 .favorites:hover{
+    text-decoration: underline;
+} */
+
+.favorites{
+    color: rgb(255, 255, 255);
+    background-color: #d8a011;
+    box-shadow: #bd8a0a 0px 0px 15px;
+    text-decoration: none;
+    font-family: "Josefinsans";
+    font-weight: 800;
+    font-size: 17px;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.favorites:hover{
+    text-decoration: none;
     background-color: rgb(255, 255, 255);
     box-shadow: rgba(255, 255, 255, 0.363) 0px 0px 15px;
     color: #f4b315;
 }
+/* .favorites:nth-of-type(5){
+    color: rgb(255, 255, 255);
+    background-color: #d8a011;
+    box-shadow: #bd8a0a 0px 0px 15px;
+}
+
+.favorites:nth-of-type(5):hover{
+    text-decoration: none;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(255, 255, 255, 0.363) 0px 0px 15px;
+    color: #f4b315;
+} */

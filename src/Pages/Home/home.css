@@ -1,14 +1,16 @@
-.container-home{
+@import "tailwindcss";
+
+/* .container-home{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    flex: 1;
     gap: 2rem;
-}
+    flex: 1;
+} */
 
-.align-moviesList{
+/* .align-moviesList{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -16,10 +18,9 @@
     justify-content: center;
     width: 100%;
     gap: 2rem;
-    flex: 1;
-}
+} */
 
-.containnerTitleMovies{
+.containnerTitleMovies, .align-favorites{
     width: 100%;
     max-width: 90%;
     display: flex;
@@ -28,15 +29,27 @@
     margin-bottom: 3rem;
   }
   
-  .containnerTitleMovies hr{
+  .containnerTitleMovies hr, .align-favorites hr{
     width: 100%;
     border: 1px solid #ffffff;
   }
   
-  .containnerTitleMovies h2{
+  .containnerTitleMovies h2, .align-favorites h2{
     width: 40rem;
     text-align: center;
     font-family: "Mulish";
     font-size: 25px;
     color: rgb(255, 255, 255); 
+  }
+
+  .loading{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+  }
+
+  .loading img{
+    width: 10rem;
   }
