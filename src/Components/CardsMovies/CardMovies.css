@@ -1,52 +1,5 @@
-.container-card{
-    width: 13rem;
-    height: 20rem;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.18rem;
-    margin: 1.5em;
-    box-sizing: border-box;
-}
 
-.container-card img{
-    width: 10rem;
-    height: 15rem;
-    object-fit: cover;
-    border-radius: inherit;
-    border: #f1a707b9 2px solid;
-    box-shadow: #000000b9 0px 5px 15px;
-}
-
-.alignTitleCard{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem 0;
-    text-align: center;
-    gap: 2rem;
-    box-sizing: border-box;
-    margin-bottom: 1.5rem;
-}
-
-.alignTitleCard h2{
-    font-family: "Mulish";
-    font-weight: 800;
-    font-size: 17px;
-    color: #ffffff;
-}
-
-.alignTitleCard h3{
-    font-family: "Mulish";
-    font-weight: 700;
-    font-size: 13px;
-    color: #423738;
-}
-
-.alignTitleCard a{
+a{
     font-family: "Mulish";
     color: white;
     text-decoration: none;
@@ -55,6 +8,6 @@
     transition: all 0.3s ease-in-out;
 }
 
-.alignTitleCard a:hover{
+a:hover{
     text-decoration: underline;
 }

@@ -1,80 +1,16 @@
-.container-header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 6rem;
-    width: 100%;
-    margin-bottom: 6rem;
+h1:nth-child(1){
+    text-shadow: #bd8a0a 0px 0px 10px;
 }
 
-.align-text{
-    display: flex;
-    align-items: end;
-    flex-direction: column;
-    text-decoration: none;
-}
-
-.align-text h1:nth-child(1){
-    font-family: "Mulish";
-    font-weight: 1000;
-    font-size: 27px;
-    color: #f4b315;
-    text-shadow: #bd8a0a 0px 0px 15px;
-}
-
-.align-text h1:nth-child(2){
-    font-family: "Josefinsans";
-    font-weight: 300;
-    font-size: 20px;
-    color: rgb(255, 255, 255);
+h1:nth-child(2){
     text-shadow: rgba(255, 255, 255, 0.363) 0px 0px 15px;
 }
 
-/* .favorites{
-    text-decoration: none;
-    font-family: "Josefinsans";
-    font-weight: 800;
-    font-size: 20px;
-    color: rgb(255, 255, 255);
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.5s;
-}
-
-.favorites:hover{
-    text-decoration: underline;
-} */
-
 .favorites{
-    color: rgb(255, 255, 255);
-    background-color: #d8a011;
-    box-shadow: #bd8a0a 0px 0px 15px;
-    text-decoration: none;
-    font-family: "Josefinsans";
-    font-weight: 800;
-    font-size: 17px;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    cursor: pointer;
+    box-shadow: #bd8a0a 0px 0px 12px;
     transition: all 0.5s;
 }
 
 .favorites:hover{
-    text-decoration: none;
-    background-color: rgb(255, 255, 255);
-    box-shadow: rgba(255, 255, 255, 0.363) 0px 0px 15px;
-    color: #f4b315;
+    box-shadow: rgba(255, 255, 255, 0.363) 0px 0px 12px;
 }
-/* .favorites:nth-of-type(5){
-    color: rgb(255, 255, 255);
-    background-color: #d8a011;
-    box-shadow: #bd8a0a 0px 0px 15px;
-}
-
-.favorites:nth-of-type(5):hover{
-    text-decoration: none;
-    background-color: rgb(255, 255, 255);
-    box-shadow: rgba(255, 255, 255, 0.363) 0px 0px 15px;
-    color: #f4b315;
-} */

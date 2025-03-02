@@ -3,8 +3,7 @@ import { useParams } from "react-router-dom";
 import InfoMovies from "../../Components/InfoMovies/InfoMovies";
 import api from "../../Services/serviceApi";
 
-
-import "./moviesDetals.css"
+// height: 100vh;
 
 function MovieDetals() {
     const { id } = useParams();
@@ -53,7 +52,7 @@ function MovieDetals() {
     }  
 
     return (
-      <div className="container-moviesDetals">
+      <div className="flex flex-1 flex-row flex-wrap items-center justify-center w-full">
         <InfoMovies key={movieDetals.id} title={movieDetals.title} alt={movieDetals.title} img={`https://image.tmdb.org/t/p/original/${movieDetals.backdrop_path}`}/>
       </div>
     );
