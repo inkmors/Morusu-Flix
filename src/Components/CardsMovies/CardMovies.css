@@ -1,5 +1,5 @@
 
-a{
+h2 a{
     font-family: "Mulish";
     color: white;
     text-decoration: none;
@@ -8,6 +8,6 @@ a{
     transition: all 0.3s ease-in-out;
 }
 
-a:hover{
+h2 a:hover{
     text-decoration: underline;
 }
