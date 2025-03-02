@@ -45,10 +45,10 @@ function MovieDetals() {
     
     if (loading) {
       return (
-        <div className="loading">
-          <img src="/assets/Spinner@1x-0.8s-200px-200px.svg" alt="loading" />
-          <h2>Buscando filmes..</h2>
-        </div>
+        <div className="flex flex-1 items-center flex-col">
+        <img className="w-50" src="/assets/Spinner@1x-0.8s-200px-200px.svg" alt="loading" />
+        <h2 className="text-2xl">Buscando...</h2>
+      </div>
       )
     }  
 
