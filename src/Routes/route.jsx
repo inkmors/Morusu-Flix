@@ -16,7 +16,8 @@ function RoutesPages(){
             <Header />
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/home" element={<Home />} />
+                <Route path="/movies" element={<Home />} />
+                <Route path="/movies/:page" element={<Home />} />
                 <Route path="/moviesdetals/:id" element={<MoviesDetals />} />
                 <Route path="/favorites" element={<Favorites />} />
 

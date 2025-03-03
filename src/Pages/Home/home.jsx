@@ -1,7 +1,8 @@
 import CardMovies from "../../Components/CardsMovies/CardMovies";
 import { useEffect, useState} from "react";
 import api from "../../Services/serviceApi";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import Pagination from "../../Components/Pagination/Pagination";
 // import LinksPages from "../../Components/LinksPages/LinksPages";
 
 // 2a1233e63324b80405a51d9575fc5937
@@ -15,6 +16,9 @@ function Home() {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const { page } = useParams()
+  const currentPage = Number(page) || 1
+
   useEffect(() => {
     document.title = "MorusuFlix | Home";
 
@@ -23,7 +27,7 @@ function Home() {
         params: {
           api_key: "2a1233e63324b80405a51d9575fc5937",
           language: "pt-BR",
-          page: 1,
+          page: currentPage,
         },
       });
       setMovies(response.data.results);
@@ -33,7 +37,7 @@ function Home() {
     }
 
     getMovies();
-  }, [])
+  }, [currentPage])
 
   if (loading) {
     return (
@@ -47,11 +51,28 @@ function Home() {
   return (
     <div className="flex flex-1 gap-12 flex-col items-center w-full">
 
-      <div className="w-full max-w-[90%] h-[25rem] flex items-center justify-center mb-[6rem] bg-[#000] rounded-[10px] overflow-hidden">
-        <img className="w-full h-full object-cover object-top rounded-[10px]" 
-          src={`https://image.tmdb.org/t/p/original/${movies[1].backdrop_path}`} alt="filme1"/>
+      <div className="w-full max-w-[90%] flex items-center justify-around mb-[1rem]">
+        <Link className="bg-[#d8a011] px-[1.4rem] py-[0.4rem] rounded-[5px] font-[Josefinsans] font-[800] text-[20px] text-[#fff] no-underline hover:bg-[#ffffff] transion-all duration-400 hover:text-[#f4b315]" to={"/emcartaz"}>Em cartaz</Link>
+        
+        <Link className="bg-[#d8a011] px-[1.4rem] py-[0.4rem] rounded-[5px] font-[Josefinsans] font-[800] text-[20px] text-[#fff] no-underline hover:bg-[#ffffff] transion-all duration-400 hover:text-[#f4b315]" to={"/acao"}>Ação</Link>
+        
+        <Link className="bg-[#d8a011] px-[1.4rem] py-[0.4rem] rounded-[5px] font-[Josefinsans] font-[800] text-[20px] text-[#fff] no-underline hover:bg-[#ffffff] transion-all duration-400 hover:text-[#f4b315]" to={"/aventura"}>Aventura</Link>
+        
+        <Link className="bg-[#d8a011] px-[1.4rem] py-[0.4rem] rounded-[5px] font-[Josefinsans] font-[800] text-[20px] text-[#fff] no-underline hover:bg-[#ffffff] transion-all duration-400 hover:text-[#f4b315]" to={"/comedia"}>Comédia</Link>
+        
+        <Link className="bg-[#d8a011] px-[1.4rem] py-[0.4rem] rounded-[5px] font-[Josefinsans] font-[800] text-[20px] text-[#fff] no-underline hover:bg-[#ffffff] transion-all duration-400 hover:text-[#f4b315]" to={"/drama"}>Drama</Link>
+        
+        <Link className="bg-[#d8a011] px-[1.4rem] py-[0.4rem] rounded-[5px] font-[Josefinsans] font-[800] text-[20px] text-[#fff] no-underline hover:bg-[#ffffff] transion-all duration-400 hover:text-[#f4b315]" to={"/romance"}>Romance</Link>
+        
+        <Link className="bg-[#d8a011] px-[1.4rem] py-[0.4rem] rounded-[5px] font-[Josefinsans] font-[800] text-[20px] text-[#fff] no-underline hover:bg-[#ffffff] transion-all duration-400 hover:text-[#f4b315]" to={"/suspense"}>Suspense</Link>
+        
+        <Link className="bg-[#d8a011] px-[1.4rem] py-[0.4rem] rounded-[5px] font-[Josefinsans] font-[800] text-[20px] text-[#fff] no-underline transion-all duration-400 hover:bg-[#ffffff] hover:text-[#f4b315]" to={"/terror"}>Terror</Link>
       </div>
 
+      <div className="w-full max-w-[90%] h-[25rem] flex items-center justify-center mb-[3rem] bg-[#000] rounded-[10px] overflow-hidden">
+        <img className="w-full h-full object-cover object-top rounded-[10px]" 
+          src={`https://image.tmdb.org/t/p/original/${movies[2].backdrop_path}`} alt="filme1"/>
+      </div>
 
       <div className="w-full max-w-[90%] flex items-center justify-around mb-15">
         <hr className="w-full border-1 border-white border-solid"/>
@@ -73,7 +94,7 @@ function Home() {
           );
         })}
       </div>
-      {/* <LinksPages/> */}
+      <Pagination />
     </div>
   );
 }

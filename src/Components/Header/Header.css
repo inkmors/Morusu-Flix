@@ -6,19 +6,6 @@ h1:nth-child(2){
     text-shadow: rgba(255, 255, 255, 0.363) 0px 0px 15px;
 }
 
-.favorites{
-    box-shadow: #bd8a0a 0px 0px 12px;
-    transition: all 0.5s;
-}
-
-.favorites:hover{
-    box-shadow: rgba(255, 255, 255, 0.363) 0px 0px 12px;
-}
-
-.btn-search{
-    transition: all 0.5s;
-}
-
-.btn-search:hover{
+.favorites:hover, .btn-search:hover{
     box-shadow: rgba(255, 255, 255, 0.363) 0px 0px 12px;
 }
