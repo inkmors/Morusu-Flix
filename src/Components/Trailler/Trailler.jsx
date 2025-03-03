@@ -6,6 +6,8 @@ import FavoriteButton from "../../Components/FavoriteButton/FavoriteButton";
 function Trailler({movieId}) {
   const [trailerKey, setTrailerKey] = useState(null);
 
+  const apiKey = import.meta.env.VITE_API_KEY
+
   useEffect(() => {
     if (!movieId) return;
 
@@ -13,7 +15,7 @@ function Trailler({movieId}) {
       try {
         const response = await api.get(`movie/${movieId}/videos`, {
           params: {
-            api_key: "2a1233e63324b80405a51d9575fc5937",
+            api_key: apiKey,
             language: "pt-BR",
           },
         });

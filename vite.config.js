@@ -25,8 +25,10 @@ export default defineConfig({
         { values: theme('textShadow') }
       )
     }),
-
     react(),
     tailwindcss()
-  ]
+  ],
+  server:{
+    historyApiFallback: true
+  }
 })

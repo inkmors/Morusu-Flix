@@ -4,8 +4,7 @@ import InfoMovies from "../../Components/InfoMovies/InfoMovies";
 import api from "../../Services/serviceApi";
 import BannerMovies from "../../Components/BannerMovie/BannerMovie";
 import LineAlign from "../../Components/LineAlign/LineAlign";
-import Trailler from "../../Components/Trailler/Trailler";
-// height: 100vh;
+import Trailler from "../../Components/Trailler/Trailler"
 
 function MovieDetals() {
     const { id } = useParams();
@@ -13,13 +12,15 @@ function MovieDetals() {
     const [ loading, setLoading ] = useState(true);
     const navigate = useNavigate();
 
+    const apiKey = import.meta.env.VITE_API_KEY
+
     useEffect(() => {
       document.title = "MorusuFlix | MoviesDetals";
  
       async function loadingMovies() {
         await api.get(`movie/${id}`, {
           params: {
-            api_key: "2a1233e63324b80405a51d9575fc5937",
+            api_key: apiKey,
             language: "pt-BR",
           },
         })

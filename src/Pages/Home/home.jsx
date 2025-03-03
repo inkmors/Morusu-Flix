@@ -7,17 +7,12 @@ import BannerMovies from "../../Components/BannerMovie/BannerMovie"
 import LineAlign from "../../Components/LineAlign/LineAlign"
 import LinksGenres from "../../Components/LinksGenres/LinksGenres"
 
-// 2a1233e63324b80405a51d9575fc5937
-
-// 20250226182153
-// https://api.themoviedb.org/3
-// https://api.themoviedb.org/3/movie/550?api_key=2a1233e63324b80405a51d9575fc5937
-// https://api.themoviedb.org/3movie/now_playing?api_key=2a1233e63324b80405a51d9575fc5937
-
 function Home() {
   const [movies, setMovies] = useState([])
   const [loading, setLoading] = useState(true)
   const navigate = useNavigate()
+
+  const apiKey = import.meta.env.VITE_API_KEY
   
   const { page } = useParams()
   const currentPage = Number(page) || 1
@@ -29,7 +24,7 @@ function Home() {
       try {
         const response = await api.get("movie/now_playing", {
           params: {
-            api_key: "2a1233e63324b80405a51d9575fc5937",
+            api_key: apiKey,
             language: "pt-BR",
             page: currentPage,
             region: "BR",
