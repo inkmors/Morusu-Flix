@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import InfoMovies from "../../Components/InfoMovies/InfoMovies";
 import api from "../../Services/serviceApi";
-
+import BannerMovies from "../../Components/BannerMovie/BannerMovie";
+import LineAlign from "../../Components/LineAlign/LineAlign";
 // height: 100vh;
 
 function MovieDetals() {
@@ -53,19 +54,17 @@ function MovieDetals() {
 
     return (
       <div className="flex flex-1 flex-row flex-wrap items-center justify-center w-full">
-          <div className="w-full max-w-[90%] flex items-center justify-around mb-20">
-            <hr className="w-full border-1 border-white border-solid"/>
-            <h2 className="text-[25px] text-center w-170 font-[Mulish] color-white">Detalhes do filme</h2>
-            <hr className="w-full border-1 border-white border-solid"/>
-          </div>
 
+        <BannerMovies bannerMovie={movieDetals.backdrop_path}/>
 
-        <InfoMovies key={movieDetals.id} title={movieDetals.title} alt={movieDetals.title} img={`https://image.tmdb.org/t/p/original/${movieDetals.backdrop_path}`} overview={`${movieDetals.overview.slice(0, 240)}...`} genre={`${movieDetals.genres[0].name}`} avalible={movieDetals.vote_average} duration={movieDetals.runtime} date={movieDetals.release_date} production={movieDetals.production_companies[0].name}/>
+        <LineAlign title="Detalhes do filme" />
+
+        <InfoMovies key={movieDetals.id} title={movieDetals.title} alt={movieDetals.title} img={`https://image.tmdb.org/t/p/original/${movieDetals.poster_path}`} overview={`${movieDetals.overview.slice(0, 240)}...`} genre={`${movieDetals.genres[0].name}`} avalible={movieDetals.vote_average} duration={movieDetals.runtime} date={movieDetals.release_date} production={movieDetals.production_companies[0].name}/>
       
         <div className="w-full max-w-[90%] flex items-center justify-around mb-20">
-          <hr className="w-full border-1 border-white border-solid"/>
-          <h2 className="text-[25px] text-center w-170 font-[Mulish] color-white">Assista ao trailler</h2>
-          <hr className="w-full border-1 border-white border-solid"/>
+          <hr className="w-full border-1 border-[#d8a011] border-solid"/>
+          <h2 className="text-[25px] font-[800] text-center w-170 font-[Mulish] text-[#fff]">Assista ao trailer</h2>
+          <hr className="w-full border-1 border-[#d8a011] border-solid"/>
         </div>
 
       </div>

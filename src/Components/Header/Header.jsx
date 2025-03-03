@@ -28,7 +28,7 @@ function Header() {
         <Link className="favorites" to="/favorites"><p>Suspense</p></Link>
         <Link className="favorites" to="/favorites"><p>Em cartaz</p></Link> */}
 
-        <Link className="favorites bg-[#f4b315] px-[2rem] py-[0.5rem] rounded-[5px] font-[Josefinsans] font-[800] text-[20px] text-[#fff] no-underline hover:bg-[#ffffff] transion-all duration-400 hover:text-[#f4b315]" to="/favorites"><p>favoritos</p></Link>
+        <Link className="favorites bg-[#f4b315] px-[2rem] py-[0.5rem] rounded-[5px] font-[Josefinsans] font-[800] text-[20px] text-[#1a141a] no-underline hover:bg-[#ffffff] transion-all duration-400 hover:text-[#f4b315]" to="/favorites"><p>favoritos</p></Link>
       </div>
     );
   }
