@@ -14,7 +14,7 @@ function Trailler({movieId}) {
         const response = await api.get(`movie/${movieId}/videos`, {
           params: {
             api_key: "2a1233e63324b80405a51d9575fc5937",
-            language: "en-US",
+            language: "pt-BR",
           },
         });
 

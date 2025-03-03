@@ -1,4 +1,3 @@
-import './InfoMovies.css';
 import FavoriteButton from '../FavoriteButton/FavoriteButton';
 
 function InfoMovies(props) {
@@ -13,8 +12,8 @@ function InfoMovies(props) {
           <h2 className='font-[Mulish] text-[24px] text-[#f4b315] font-[800]'>Título: <span className='text-[#ffffff] font-[400]'>{props.title}</span></h2>
           <h2 className='font-[Mulish] text-[24px] text-[#f4b315] font-[800]'>Sinopse: <span className='text-[#ffffff] font-[400]'>{props.overview}</span></h2>
           <h2 className='font-[Mulish] text-[24px] text-[#f4b315] font-[800]'>Gênero: <span className='text-[#ffffff] font-[400]'>{props.genre}</span></h2>
-          <h2 className='font-[Mulish] text-[24px] text-[#f4b315] font-[800]'>Avaliação: <span className='text-[#ffffff] font-[400]'>{`${props.avalible.toFixed(1)} / 10`}</span></h2>
-          <h2 className='font-[Mulish] text-[24px] text-[#f4b315] font-[800]'>Duração: <span className='text-[#ffffff] font-[400]'>{props.duration} minutos</span></h2>
+          <h2 className='font-[Mulish] text-[24px] text-[#f4b315] font-[800]'>Avaliação: <span className='text-[#ffffff] font-[400]'>{`${props.avalible} / 10`}</span></h2>
+          <h2 className='font-[Mulish] text-[24px] text-[#f4b315] font-[800]'>Duração: <span className='text-[#ffffff] font-[400]'>{props.duration}</span></h2>
           <h2 className='font-[Mulish] text-[24px] text-[#f4b315] font-[800]'>Data de produção: <span className='text-[#ffffff] font-[400]'>{props.date}</span></h2>
           <h2 className='font-[Mulish] text-[24px] text-[#f4b315] font-[800]'>Produção: <span className='text-[#ffffff] font-[400]'>{props.production}</span></h2>
         </div>

@@ -1,12 +1,11 @@
-import CardMovies from "../../Components/CardsMovies/CardMovies";
-import { useEffect, useState} from "react";
-import api from "../../Services/serviceApi";
-import { Link, useParams } from "react-router-dom";
-import Pagination from "../../Components/Pagination/Pagination";
-import BannerMovies from "../../Components/BannerMovie/BannerMovie";
-import LineAlign from "../../Components/LineAlign/LineAlign";
-import LinksGenres from "../../Components/LinksGenres/LinksGenres";
-// import LinksPages from "../../Components/LinksPages/LinksPages";
+import CardMovies from "../../Components/CardsMovies/CardMovies"
+import { useEffect, useState} from "react"
+import api from "../../Services/serviceApi"
+import { Link, useParams, useNavigate } from "react-router-dom"
+import Pagination from "../../Components/Pagination/Pagination"
+import BannerMovies from "../../Components/BannerMovie/BannerMovie"
+import LineAlign from "../../Components/LineAlign/LineAlign"
+import LinksGenres from "../../Components/LinksGenres/LinksGenres"
 
 // 2a1233e63324b80405a51d9575fc5937
 
@@ -16,31 +15,43 @@ import LinksGenres from "../../Components/LinksGenres/LinksGenres";
 // https://api.themoviedb.org/3movie/now_playing?api_key=2a1233e63324b80405a51d9575fc5937
 
 function Home() {
-  const [movies, setMovies] = useState([]);
-  const [loading, setLoading] = useState(true);
-
+  const [movies, setMovies] = useState([])
+  const [loading, setLoading] = useState(true)
+  const navigate = useNavigate()
+  
   const { page } = useParams()
   const currentPage = Number(page) || 1
 
   useEffect(() => {
-    document.title = "MorusuFlix | Home";
+    document.title = "MorusuFlix | Home"
 
     async function getMovies() {
-      const response = await api.get("movie/now_playing", {
-        params: {
-          api_key: "2a1233e63324b80405a51d9575fc5937",
-          language: "pt-BR",
-          page: currentPage,
-        },
-      });
-      setMovies(response.data.results);
-      setLoading(false);
+      try {
+        const response = await api.get("movie/now_playing", {
+          params: {
+            api_key: "2a1233e63324b80405a51d9575fc5937",
+            language: "pt-BR",
+            page: currentPage,
+            region: "BR",
+          },
+        })
 
-      //console.log(response.data.results);
+        if (!response.data.results || response.data.results.length === 0) {
+          navigate("/movies/1")
+          return
+        } 
+
+        setMovies(response.data.results)
+      } catch (error) {
+        console.error("Erro ao carregar os filmes", error)
+        navigate("/", { replace: true })
+      } finally {
+        setLoading(false)
+      }
     }
 
-    getMovies();
-  }, [currentPage])
+    getMovies()
+  }, [currentPage, navigate])
 
   if (loading) {
     return (
@@ -54,7 +65,7 @@ function Home() {
   return (
     <div className="flex flex-1 gap-12 flex-col items-center w-full">
       <div className="w-full max-w-[90%] flex items-center justify-around mb-[1rem]">
-        <LinksGenres genres="Em cartaz" />
+        <LinksGenres genres="Cartaz" />
         <LinksGenres genres="Ação" />
         <LinksGenres genres="Animação" />
         <LinksGenres genres="Aventura" />
@@ -65,21 +76,23 @@ function Home() {
         <LinksGenres genres="Terror" />
       </div>
       
-      <BannerMovies bannerMovie={movies[2].backdrop_path}/>
+      {movies.length > 0 && <BannerMovies bannerMovie={movies[0].backdrop_path} />}
 
-      <LineAlign title="Em cartaz"/>
+      <LineAlign title="Em cartaz" />
 
       <div className="max-w-[91%] flex flex-wrap flex-row justify-center items-center gap-10">
-        {movies.map((movie) => {
-          return (
-            <CardMovies key={movie.id} title={movie.title} alt={movie.title} img={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} 
-            link={<Link to={`/moviesdetals/${movie.id}`}>{movie.title}</Link>}/>
-          );
-        })}
+        {movies.length > 0 && 
+          movies.map((movie) =>
+            movie.poster_path ? (
+              <CardMovies key={movie.id} title={movie.title} alt={movie.title} img={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
+                link={<Link to={`/moviesdetals/${movie.id}`}>{movie.title}</Link>}/>
+            ) : null
+          )
+        }
       </div>
       <Pagination />
     </div>
-  );
+  )
 }
 
-export default Home;
+export default Home
