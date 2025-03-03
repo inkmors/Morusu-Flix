@@ -14,3 +14,11 @@ h1:nth-child(2){
 .favorites:hover{
     box-shadow: rgba(255, 255, 255, 0.363) 0px 0px 12px;
 }
+
+.btn-search{
+    transition: all 0.5s;
+}
+
+.btn-search:hover{
+    box-shadow: rgba(255, 255, 255, 0.363) 0px 0px 12px;
+}
