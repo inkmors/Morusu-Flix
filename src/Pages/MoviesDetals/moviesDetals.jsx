@@ -48,7 +48,7 @@ function MovieDetals() {
     return (
       <div className="flex flex-1 flex-row flex-wrap items-center justify-center w-full">
 
-        <BannerMovies bannerMovie={movieDetals.backdrop_path}/>
+        {movieDetals && <BannerMovies movies={movieDetals} isCarousel={true}/>}
 
         <LineAlign title="Detalhes do filme" />
 

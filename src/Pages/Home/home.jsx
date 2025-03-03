@@ -76,7 +76,7 @@ function Home() {
         <LinksGenres genres="Terror" />
       </div>
       
-      {movies.length > 0 && <BannerMovies movies={movies} />}
+      {movies.length > 0 && <BannerMovies movies={movies} isCarousel={true}/>}
 
       <LineAlign title="Em cartaz" />
 
