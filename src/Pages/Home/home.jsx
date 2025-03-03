@@ -76,7 +76,7 @@ function Home() {
         <LinksGenres genres="Terror" />
       </div>
       
-      {movies.length > 0 && <BannerMovies bannerMovie={movies[0].backdrop_path} />}
+      {movies.length > 0 && <BannerMovies movies={movies} />}
 
       <LineAlign title="Em cartaz" />
 
