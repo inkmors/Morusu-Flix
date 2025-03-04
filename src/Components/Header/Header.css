@@ -1,11 +1,9 @@
 h1:nth-child(1){
     text-shadow: #bd8a0a 0px 0px 10px;
 }
-
 h1:nth-child(2){
     text-shadow: rgba(255, 255, 255, 0.363) 0px 0px 15px;
 }
-
 .favorites:hover, .btn-search:hover{
     box-shadow: rgba(255, 255, 255, 0.363) 0px 0px 12px;
 }

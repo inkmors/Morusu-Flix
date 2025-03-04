@@ -6,6 +6,7 @@ import Pagination from "../../Components/Pagination/Pagination"
 import BannerMovies from "../../Components/BannerMovie/BannerMovie"
 import LineAlign from "../../Components/LineAlign/LineAlign"
 import LinksGenres from "../../Components/LinksGenres/LinksGenres"
+import { toast } from "react-toastify"
 
 function Home() {
   const [movies, setMovies] = useState([])
@@ -38,7 +39,8 @@ function Home() {
 
         setMovies(response.data.results)
       } catch (error) {
-        console.error("Erro ao carregar os filmes", error)
+        toast.error("Erro ao carregar os filmes!")
+        console.error(error)
         navigate("/", { replace: true })
       } finally {
         setLoading(false)
@@ -46,7 +48,7 @@ function Home() {
     }
 
     getMovies()
-  }, [currentPage, navigate])
+  }, [currentPage, navigate, apiKey])
 
   if (loading) {
     return (
@@ -69,6 +71,7 @@ function Home() {
         <LinksGenres genres="Romance" />
         <LinksGenres genres="Suspense" />
         <LinksGenres genres="Terror" />
+        {/* Modelo para eu não esquecer de desenvolver */}
       </div>
       
       {movies.length > 0 && <BannerMovies movies={movies} isCarousel={true}/>}

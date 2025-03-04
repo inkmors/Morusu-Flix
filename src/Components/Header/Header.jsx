@@ -1,14 +1,14 @@
 import "./Header.css"
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 function Header() {
     function clickSearch(){
-      alert("Funcionalidade em desenvolvimento")
+      toast.warn("Funcionalidade em desenvolvimento")
+      document.querySelector("input").value = "";
     }
 
-
-    return (
-    
+    return (    
       <div className=" w-full flex items-center justify-between mb-[8rem] py-[1rem] px-[7rem]">
           <Link className="flex items-end justify-center flex-col" to="/">
             <h1 className="font-[Mulish] font-[1000] text-[27px] text-[#f4b315]">MORUSU</h1>
@@ -20,7 +20,7 @@ function Header() {
             <button className="transion-all duration-400 p-[0.4rem] bg-[#f4b315] rounded-e-[5px] w-[4rem] cursor-pointer hover:bg-[#d8a011] text-[#fff]" onClick={clickSearch}>🔎</button>
         </div>
 
-          <Link className="favorites bg-[#f4b315] px-[1.5rem] py-[0.3rem] rounded-[5px] font-[Josefinsans] font-[800] text-[20px] text-[#1a141a] no-underline hover:bg-[#ffffff] transion-all duration-400 hover:text-[#f4b315]" to="/favorites"><p>favoritos</p></Link>
+          <Link className="favorites bg-[#f4b315] px-[1.5rem] py-[0.3rem] rounded-[5px] font-[Josefinsans] font-[800] text-[20px] text-[#1a141a] no-underline hover:bg-[#ffffff] transion-all duration-400 hover:text-[#f4b315]" to="/favorites"><p>Favoritos</p></Link>
         </div>
     );
   }

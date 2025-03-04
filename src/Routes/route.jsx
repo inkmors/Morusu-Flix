@@ -21,6 +21,16 @@ function RoutesPages(){
                 <Route path="/moviesdetals/:id" element={<MoviesDetals />} />
                 <Route path="/favorites" element={<Favorites />} />
 
+                {/* Funcionalidades futuras */}
+                {/* <Route path="/acao" element={<acao />} />
+                <Route path="/aventura" element={<aventura />} />
+                <Route path="/animacao" element={<animacao />} />
+                <Route path="/suspense" element={<suspense />} />
+                <Route path="/drama" element={<drama />} />
+                <Route path="/terror" element={<terror />} />
+                <Route path="/romance" element={<romance />} />
+                <Route path="/comedia" element={<comedia />} /> */}
+
                 <Route path="*" element={<Error />} />
             </Routes>
             <Footer/>

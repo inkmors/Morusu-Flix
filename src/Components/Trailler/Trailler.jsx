@@ -1,7 +1,6 @@
 import api from "../../Services/serviceApi";
 import ReactPlayer from "react-player";
 import { useEffect, useState } from "react";
-import FavoriteButton from "../../Components/FavoriteButton/FavoriteButton";
 
 function Trailler({movieId}) {
   const [trailerKey, setTrailerKey] = useState(null);
@@ -33,13 +32,11 @@ function Trailler({movieId}) {
     };
 
     getTrailer();
-  }, [movieId]);
+  }, [movieId, apiKey]);
   return (
     <div className="w-full flex flex-col items-center justify-center mb-[10rem] mt-[5rem]">
       {trailerKey ? ( <ReactPlayer className="mb-[2rem]" url={`https://www.youtube.com/watch?v=${trailerKey}`} controls={true} width="50%" height="560px"/>) 
       : (<p className="font-[Mulish] text-[24px] text-[#f4b315] font-[800] mb-[2rem]">Trailer indisponível</p>)}
-
-      <FavoriteButton/>
     </div>
   );
 }
