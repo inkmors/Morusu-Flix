@@ -61,7 +61,15 @@ function Home() {
 
   return (
     <div className="flex flex-1 gap-12 flex-col items-center w-full">
-      <div className="w-full max-w-[90%] flex items-center justify-around mb-[1rem]">
+      <div className="flex items-center w-full justify-around w-full max-w-[60%] mb-[6rem]">
+        <div className="flex flex-col items-center">
+          <h1 className="font-[Mulish] font-[1000] text-[46px] text-[#f4b315]">🍿 FIQUE POR DENTRO AGORA MESMO!</h1>
+          <h2 className="font-[Josefinsans] font-[300] text-[30px] text-white">DAS NOVIDADES DOS <span className="text-[#f4b315]">FILMES</span> E <span className="text-[#f4b315]">SÉRIES</span> NA <strong className="font-[1000]"><span className="text-[#f4b315]">MORUSU</span>FLIX!!</strong></h2>
+        </div>
+        <img className="w-[9rem]" src="/assets/icons8-abelha-96.png" alt="" />
+      </div>
+
+      <div className="w-full max-w-[90%] flex items-center justify-around mb-[0.5rem]">
         <LinksGenres genres="Cartaz" />
         <LinksGenres genres="Ação" />
         <LinksGenres genres="Animação" />
@@ -78,7 +86,7 @@ function Home() {
 
       <LineAlign title="Em cartaz" />
 
-      <div className="max-w-[91%] flex flex-wrap flex-row justify-center items-center gap-10">
+      <div className="max-w-[90%] flex flex-wrap flex-row justify-center items-center gap-10">
         {movies.length > 0 && 
           movies.map((movie) =>
             movie.poster_path ? (

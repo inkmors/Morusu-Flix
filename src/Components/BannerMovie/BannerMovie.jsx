@@ -35,7 +35,7 @@ function BannerMovies({ movies, isCarousel = true }) {
     };
 
     return (
-      <div className="w-full max-w-[90%] h-[25rem] mb-[4rem]">
+      <div className="w-full max-w-[90%] h-[25rem] mb-[7rem]">
         <Slider {...settings}>
           {banners.map(movie => (
             <div key={movie.id} className="h-full">
@@ -51,7 +51,7 @@ function BannerMovies({ movies, isCarousel = true }) {
 
   else if (movies.backdrop_path) {
     return (
-      <div className="w-full max-w-[90%] h-[25rem] flex items-center justify-center bg-[#000] rounded-[10px] overflow-hidden mb-[4rem] border-[#fff] border-[2px]">
+      <div className="w-full max-w-[90%] h-[25rem] flex items-center justify-center bg-[#000] rounded-[10px] overflow-hidden mb-[7rem] border-[#fff] border-[2px]">
         <img 
           className="w-full h-[25rem] object-cover object-top rounded-[10px]" 
           src={`https://image.tmdb.org/t/p/original/${movies.backdrop_path}`} 
