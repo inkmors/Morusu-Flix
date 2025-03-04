@@ -10,7 +10,7 @@ function CardMovies(props) {
             <h2 className='font-[Mulish] text-center font-[800] text-[17px] text-[#ffffff]'>{props.link}</h2>
         </div>
     </div>
-  );
+  )
 }
 
 export default CardMovies;
