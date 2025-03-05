@@ -35,12 +35,12 @@ function BannerMovies({ movies, isCarousel = true }) {
     };
 
     return (
-      <div className="w-full max-w-[90%] h-[18rem] md:h-[20rem] mb-4 md:mb-[5rem]">
+      <div className="w-full max-w-[90%] h-[10rem] md:h-[20rem] mb-4 md:mb-[5rem]">
   <Slider {...settings}>
     {banners.map(movie => (
-      <div key={movie.id} className="h-full">
+      <div key={movie.id} className="h-[10rem] md:h-[20rem] mb-4 md:mb-[5rem] overflow-hidden">
         <img 
-          className="w-full max-h-[25rem] object-cover object-top rounded-[10px] border-2 border-[#fff]"
+          className="w-full h-full object-cover object-top rounded-[10px] border-2 border-[#fff]"
           src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`} 
           alt={movie.title} 
         />
@@ -53,7 +53,7 @@ function BannerMovies({ movies, isCarousel = true }) {
 
   else if (movies.backdrop_path) {
     return (
-      <div className="w-full max-w-[90%] h-[10rem] md:h-[20rem] flex items-center justify-center bg-[#000] rounded-[10px] overflow-hidden mb-4 md:mb-[5rem] border-2 border-[#fff]">
+      <div className="w-full max-w-[90%] h-[10rem] md:h-[20rem] flex items-center justify-center bg-[#000] rounded-[10px] overflow-hidden mb-[4rem] md:mb-[5rem] border-2 border-[#fff]">
   <img 
     className="w-full max-h-[25rem] object-cover object-top rounded-[10px]" 
     src={`https://image.tmdb.org/t/p/original/${movies.backdrop_path}`} 

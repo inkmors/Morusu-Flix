@@ -61,21 +61,16 @@ function Home() {
 
   return (
     <div className="flex flex-1 gap-12 flex-col items-center w-full">
-      <div className="flex flex-col md:flex-row items-center justify-between max-w-full md:max-w-[45%] mb-12 md:mb-24 px-4">
-  {/* Texto */}
-  <div className="flex flex-col items-center md:items-start text-center md:text-left">
-    <h1 className="font-[Mulish] font-extrabold text-3xl md:text-[46px] text-[#f4b315]">
-      🍿 FIQUE POR DENTRO AGORA MESMO!
-    </h1>
-    <h2 className="font-[Josefinsans] font-light text-lg md:text-[30px] text-white mt-2">
-      NAS NOVIDADES DOS <span className="text-[#f4b315]">FILMES</span> E <span className="text-[#f4b315]">SÉRIES</span> NA <strong className="font-extrabold">
-        <span className="text-[#f4b315]">MORUSU</span>FLIX!!
-      </strong>
-    </h2>
-  </div>
-  {/* Imagem */}
-  <img className="w-20 md:w-[9rem] mt-4 md:mt-0" src="/assets/icons8-abelha-96.png" alt="Logo" />
-</div>
+      <div className="flex flex-col md:flex-row items-center justify-between max-w-full md:max-w-[90%] lg:max-w-[50%] md:max-w-[60%] mb-12 md:mb-24 px-4">
+
+        <div className="max-w-full flex flex-col items-center md:items-start text-center md:text-left">
+          <h1 className="font-[Mulish] font-extrabold text-3xl md:text-[46px] text-[#f4b315]">🍿 FIQUE POR DENTRO AGORA MESMO!</h1>
+
+          <h2 className="font-[Josefinsans] font-light text-lg md:text-[30px] text-white mt-2">NAS NOVIDADES DOS <span className="text-[#f4b315]">FILMES</span> E <span className="text-[#f4b315]">SÉRIES</span> COM A <strong className="font-extrabold"><span className="text-[#f4b315]">MORUSU</span>FLIX!!</strong></h2>
+        </div>
+
+        <img className="w-20 md:w-[9rem] mt-4 md:mt-0 md:ml-[4rem]" src="/assets/icons8-abelha-96.png" alt="Logo" />
+      </div>
 
 
       <div className="flex-wrap w-full max-w-[90%] flex items-center justify-center mb-[0.5rem]">
@@ -95,7 +90,7 @@ function Home() {
 
       <LineAlign title="Em cartaz" />
 
-      <div className="max-w-[90%] flex flex-wrap flex-row justify-center items-center gap-10">
+      <div className="max-w-[90%] flex flex-wrap flex-row justify-center items-center gap-4">
         {movies.length > 0 && 
           movies.map((movie) =>
             movie.poster_path ? (

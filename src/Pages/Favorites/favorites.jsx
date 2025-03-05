@@ -31,7 +31,7 @@ import { toast } from "react-toastify";
                 <h2 className="font-[Mulish] text-[24px] text-[#f4b315] font-[800]">Você não possui nenhum filme ou série salvo!</h2>
             )}
             
-            <div className="flex flex-wrap items-center justify-center">
+            <div className="flex flex-wrap items-center justify-center ">
                 {moviesFav.map((favorite) => (
                     <CardsFavorites key={favorite.id} id={favorite.id} img={favorite.img} alt={`Foto do filme ${favorite.title}`} title={favorite.title} delet={() => deletMovie(favorite.id)} />
                 ))}

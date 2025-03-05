@@ -92,7 +92,7 @@ function MovieDetals() {
         <Trailler movieId={movieDetals.id} saveMovie={saveMovie}/>
 
         <LineAlign title="Alguns filmes e séries" />
-        <p className="mb-[5rem] text-[#fff] text-[20px] font-[Mulish]">Área em desenvolvimento...Aproveite os filmes e séries que gostou!</p>
+        <p className="mb-[5rem] text-[#fff] text-[20px] text-center font-[Mulish]">Área em desenvolvimento...Aproveite os filmes e séries que gostou!</p>
       </div>
     );
   }
