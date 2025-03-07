@@ -21,7 +21,7 @@ function RoutesPages(){
                 <Route path="/movies/:page" element={<Home />} />
                 <Route path="/moviesdetals/:id" element={<MoviesDetals />} />
                 <Route path="/favorites" element={<Favorites />} />
-                <Route path="/categories" element={<Categories />} />
+                <Route path="/categories/:page/:idGenre" element={<Categories />} />
 
                 {/* Funcionalidades futuras */}
 

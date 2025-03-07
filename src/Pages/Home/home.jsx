@@ -76,14 +76,14 @@ function Home() {
 
       <div className="flex-wrap w-full max-w-[90%] flex items-center justify-center mb-[0.5rem]">
         <LinksGenres genres="Cartaz" />
-        <LinksGenres genres="Ação" />
-        <LinksGenres genres="Animação" />
-        <LinksGenres genres="Aventura" />
-        <LinksGenres genres="Comédia" />
-        <LinksGenres genres="Drama" />
-        <LinksGenres genres="Romance" />
-        <LinksGenres genres="Suspense" />
-        <LinksGenres genres="Terror" />
+        <LinksGenres genres="Ação" idGenre={28}/>
+        <LinksGenres genres="Animação" idGenre={16} />
+        <LinksGenres genres="Aventura" idGenre={12} />
+        <LinksGenres genres="Comédia" idGenre={35} />
+        <LinksGenres genres="Drama" idGenre={18} />
+        <LinksGenres genres="Romance" idGenre={10749} />
+        <LinksGenres genres="Suspense" idGenre={53} />
+        <LinksGenres genres="Terror" idGenre={27} />
         {/* Modelo para eu não esquecer de desenvolver */}
       </div>
       
