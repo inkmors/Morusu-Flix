@@ -28,7 +28,8 @@ function Home() {
             api_key: apiKey,
             language: "pt-BR",
             page: currentPage,
-            region: "BR",
+            region: "BR"
+            
           },
         })
 
