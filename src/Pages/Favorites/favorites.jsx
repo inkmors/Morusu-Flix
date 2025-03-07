@@ -28,7 +28,10 @@ import { toast } from "react-toastify";
             <LineAlign title="Meus Favoritos" />
 
             {moviesFav.length === 0 && (
-                <h2 className="font-[Mulish] text-[18px] text-center text-[#f4b315] font-[800] md:text-[24px]">Você não possui nenhum filme ou série salvo!</h2>
+                <div className="flex flex-col items-center gap-[3rem]">
+                    <h2 className="font-[Mulish] text-[18px] text-center text-[#f4b315] font-[800] md:text-[24px]">Você não possui nenhum filme ou série salvo!</h2>
+                    <img className="w-[5rem] mb-[3rem] md:w-[7rem]" src="/assets/icons8-chorando-90.png" alt="imagem de Error" />
+                </div>
             )}
             
             <div className="flex flex-wrap items-center justify-center">

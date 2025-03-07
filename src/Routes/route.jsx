@@ -4,7 +4,7 @@ import Home from "../Pages/Home/home";
 import MoviesDetals from "../Pages/MoviesDetals/moviesDetals";
 import Favorites from "../Pages/Favorites/favorites";
 import Error from "../Pages/Error/error";
-import Categories from "../Pages/Categories/categories";
+import Categories from "../Pages/Categories/Categories.jsx";
 
 import Header from "../Components/Header/Header";
 import Footer from "../Components/Footer/Footer";
