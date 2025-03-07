@@ -10,6 +10,7 @@ lerna-debug.log*
 node_modules
 dados.txt
 vercel.json
+uigigi
 dist
 dist-ssr
 *.local
