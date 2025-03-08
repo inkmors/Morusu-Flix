@@ -12,7 +12,6 @@ function Header() {
       navigate(`/search/${query.trim()}`)
       setQuery("")
   }
-
     return (    
       <div className="w-full flex-wrap flex flex-col lg:flex-row items-center justify-between mb-10 md:mb-16 py-4 px-4 md:px-10 lg:px-[7rem] gap-[3rem]">
 
@@ -36,8 +35,7 @@ function Header() {
 
         <Link className="favorites bg-[#f4b315] px-[2rem] py-[0.47rem] rounded-[5px] font-[Josefinsans] font-bold text-[18px] md:text-[16px] text-[#1a141a] no-underline hover:bg-[#ffffff] transition-all duration-400 hover:text-[#f4b315]" to="/favorites"><p>Favoritos</p></Link>
 </div>
-
-    );
+);
   }
   
   export default Header;
