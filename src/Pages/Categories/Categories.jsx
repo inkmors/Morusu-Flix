@@ -6,6 +6,7 @@ import Pagination from "../../Components/Pagination/Pagination"
 import BannerMovies from "../../Components/BannerMovie/BannerMovie"
 import LineAlign from "../../Components/LineAlign/LineAlign"
 import LinksGenres from "../../Components/LinksGenres/LinksGenres"
+import InfoMorusu from "../../Components/InfosMorusu/InfoMorusu"
 import { toast } from "react-toastify"
 
 function Categories() {
@@ -56,7 +57,9 @@ function Categories() {
 
         setMovies(response.data.results)
       } catch (error) {
-        toast.error("Erro ao carregar os filmes!")
+        if(!toast.isActive("no-results")){
+          toast.error("Erro ao carregar os filmes!", { toastId: "no-results" })
+        }
         console.error(error)
         navigate("/", { replace: true })
       } finally {
@@ -78,25 +81,16 @@ function Categories() {
 
   return (
     <div className="flex flex-1 gap-12 flex-col items-center w-full">
-      <div className="flex flex-col md:flex-row items-center justify-between max-w-full md:max-w-[90%] lg:max-w-[50%] md:max-w-[60%] mb-12 md:mb-24 px-4">
-
-        <div className="max-w-full flex flex-col items-center md:items-start text-center md:text-left">
-          <h1 className="font-[Mulish] font-extrabold text-3xl md:text-[46px] text-[#f4b315]">🍿 FIQUE POR DENTRO AGORA MESMO!</h1>
-
-          <h2 className="font-[Josefinsans] font-light text-lg md:text-[30px] text-white mt-2">NAS NOVIDADES DOS <span className="text-[#f4b315]">FILMES</span> E <span className="text-[#f4b315]">SÉRIES</span> COM A <strong className="font-extrabold"><span className="text-[#f4b315]">MORUSU</span>FLIX!!</strong></h2>
-        </div>
-
-        <img className="w-20 md:w-[9rem] mt-4 md:mt-0 md:ml-[4rem]" src="/assets/icons8-abelha-96.png" alt="Logo" />
-      </div>
-
+      <InfoMorusu />
 
       <div className="flex-wrap w-full max-w-[90%] flex items-center justify-center mb-[0.5rem]">
-        <LinksGenres genres="Cartaz" />
         <LinksGenres genres="Ação" idGenre={28}/>
         <LinksGenres genres="Animação" idGenre={16} />
         <LinksGenres genres="Aventura" idGenre={12} />
+        <LinksGenres genres="Fantasia" idGenre={14} />
         <LinksGenres genres="Comédia" idGenre={35} />
         <LinksGenres genres="Drama" idGenre={18} />
+        <LinksGenres genres="Ficção" idGenre={878} />
         <LinksGenres genres="Romance" idGenre={10749} />
         <LinksGenres genres="Suspense" idGenre={53} />
         <LinksGenres genres="Terror" idGenre={27} />

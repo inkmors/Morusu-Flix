@@ -42,5 +42,4 @@ import { toast } from "react-toastify";
         </div>
     )
  }
-
  export default Favorites
