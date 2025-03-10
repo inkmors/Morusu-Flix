@@ -9,7 +9,7 @@ function CardMovies(props) {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          console.log(`Carregando imagem: ${props.img}`)
+          //console.log(`Carregando imagem: ${props.img}`)
           setIsVisible(true)
           observer.disconnect()
         }
@@ -27,12 +27,12 @@ function CardMovies(props) {
   }, [props.img])
 
   const handleImageLoad = () => {
-    console.log('Imagem carregada!')
+    //console.log('Imagem carregada!')
     setIsLoaded(true)
   }
 
   const handleImageError = () => {
-    console.error('Erro ao carregar a imagem:', props.img)
+    //console.error('Erro ao carregar a imagem:', props.img)
     setIsLoaded(true)
   }
 
