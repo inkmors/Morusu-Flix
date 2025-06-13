@@ -32,7 +32,7 @@ Para executar o projeto localmente, siga os passos abaixo:
 1. **Clone o repositório:**
 
    ```bash
-   git clone https://github.com/inkmors/Morusu-Flix.git
+   git clone https://github.com/morusudev/Morusu-Flix.git
    cd Morusu-Flix
 2. **Instale as dependências:**
 
@@ -81,7 +81,7 @@ Para executar o projeto localmente, siga os passos abaixo:
 Este projeto está licenciado sob a **MIT License.**
 
 # 📧 Contato
-- **GitHub:** @inkmors
+- **GitHub:** @morusudev
 
 - **Email:** gvlima.contato@gmail.com
 

@@ -10,11 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-firebase/auth": "^0.2.10",
     "@tailwindcss/vite": "^4.0.9",
     "axios": "^1.8.1",
     "bootstrap": "^5.3.3",
     "date-fns": "^4.1.0",
+    "firebase": "^11.6.0",
     "morusu-flix": "file:",
+    "motion": "^12.6.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-player": "^2.16.0",

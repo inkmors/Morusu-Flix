@@ -8,7 +8,10 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+backups
+NewAtt
 dados.txt
+.backups/*
 vercel.json
 uigigi
 dist

@@ -1,3 +1,4 @@
+
 function LineAlign(props) {
     return (
       <div className="w-full max-w-[90%] flex items-center justify-around mb-[1rem] md:mb-[5rem]">
@@ -10,5 +11,6 @@ function LineAlign(props) {
 
     )
 }
+
 
 export default LineAlign

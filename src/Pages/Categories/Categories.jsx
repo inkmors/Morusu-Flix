@@ -48,6 +48,7 @@ function Categories() {
             language: "pt-BR",
             page: currentPage,
             with_genres: idGenre
+            
           },
         })
 
@@ -108,7 +109,8 @@ function Categories() {
               <CardMovies key={movie.id} title={movie.title} alt={movie.title} img={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
                 link={<Link to={`/moviesdetals/${movie.id}`}>{movie.title}</Link>}/>
             ) : null
-          )}
+          )
+        }
       </div>
       <Pagination />
     </div>
