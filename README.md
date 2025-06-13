@@ -52,7 +52,7 @@ Para executar o projeto localmente, siga os passos abaixo:
    Abra seu navegador e acesse http://localhost:3000 (ou a porta configurada).
    
 # 📁 Estrutura do Projeto
-    ```bash
+   ```bash
         Morusu-Flix/
         ├── public/  # Arquivos públicos, imagens, favicon, etc.
         ├── src/
@@ -64,6 +64,7 @@ Para executar o projeto localmente, siga os passos abaixo:
         │   └── main.jsx  # Ponto de entrada da aplicação,              
         ├── package.json  # Configurações e dependências do projeto,
         └── README.md  # Documentação do projeto.
+   ```
 
 # 🤝 Contibuições
     - Contribuições são bem-vindas! Se você encontrar algum bug ou tiver sugestões para melhorias, por favor abra uma issue ou envie um pull request.
